@@ -1,9 +1,55 @@
-*{
+/* Reinicio Universal */
+/* Esta regla selecciona todos los elementos de la página usando el selector '*' (asterisco). */
+* {
+    /* Establece el relleno (espacio interno) a cero para todos los elementos. Esto elimina
+       el espacio predeterminado que los navegadores suelen aplicar (ej. en listas o párrafos). */
     padding: 0;
+    /* Establece el margen (espacio externo) a cero para todos los elementos. */
     margin: 0;
+    /* Cambia cómo se calcula el ancho y alto de un elemento. 'border-box' hace que el padding
+       y el borde se incluyan dentro del ancho y alto que definas. Esto simplifica mucho el diseño. */
     box-sizing: border-box;
 }
 
+/* Estilo del Cuerpo de la Página */
+/* Selecciona la etiqueta <body>, que es el contenedor principal de todo el contenido visible. */
 body{
+    /* Establece el color de fondo de toda la página a un tono de blanco o amarillo claro. */
     background-color: antiquewhite;
+}
+
+/* Estilos del Contenedor Principal */
+/* Selecciona la etiqueta <main>, que normalmente contiene el contenido principal de la página. */
+main{
+    /* Define el tipo de visualización como 'grid'. Esto lo inicializa como un contenedor de cuadrícula,
+       preparando sus elementos hijos para ser dispuestos en un layout de cuadrícula. */
+    display: grid;
+    /* Añade un margen de 50 píxeles en la parte superior del elemento <main>. */
+    margin-top: 50px;
+}
+
+/* Estilos para el Elemento Caja */
+/* Selecciona el elemento con la clase 'main__caja'. */
+.main__caja{
+    /* Define el tipo de visualización como 'flex'. Esto lo inicializa como un contenedor flexible,
+       permitiendo alinear fácilmente sus elementos hijos (el texto). */
+    display: flex;
+    /* Establece el color de fondo de la caja a negro sólido. */
+    background-color: black;
+    /* Establece el ancho de la caja en 50 píxeles. */
+    width: 50px;
+    /* Establece la altura de la caja en 50 píxeles. */
+    height: 50px;
+    /* Esta es la forma abreviada para centrar un elemento de bloque horizontalmente.
+    '0' aplica cero margen arriba y abajo, mientras que 'auto' divide el espacio
+       horizontal restante por igual a izquierda y derecha. */
+    margin: 0 auto;
+}
+
+/* Estilos para el Texto dentro de la Caja */
+/* Selecciona el elemento con la clase 'main__caja-texto'. */
+.main__caja-texto{
+    /* Establece el color del texto a blanco, asegurando que contraste bien
+       con el fondo negro de la caja padre. */
+    color: white;
 }
